@@ -35,6 +35,7 @@ estamos usando uma lib do react vector icons e precisa de algumas mudanças que 
 
 - src\index.js ⇒ existe uma lógica para tratar a exibição das rotas ou da página de login:
 
+   ```
     import React from 'react';
     import Routes from './Routes';
     import 'react-native-gesture-handler';
@@ -45,6 +46,7 @@ estamos usando uma lib do react vector icons e precisa de algumas mudanças que 
       const login = () => setLog(!log);
       return log ? <Routes /> : <SignIn login={login} />;
     }
+    ```
 
 - `log` é o estado por padrão é false, isso significa que ele está desconectado,e passado pra tela de login **SignIn** uma função que pertence ao app.js essa função faz a mudança do estado mudando assin a tela e caso quisermos desconectar é só passar pra routes e da routes pra página de SignOut.
 
