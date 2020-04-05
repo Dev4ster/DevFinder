@@ -5,7 +5,9 @@ import SignIn from './Pages/SignIn';
 import './Config/Reactotron';
 
 export default function App() {
-  const [log, setLog] = React.useState(false);
-  const login = () => setLog(!log);
-  return log ? <Routes /> : <SignIn login={login} />;
+  const [logged, setLogged] = React.useState(false);
+
+  const login = () => setLogged(!logged);
+
+  return logged ? <Routes /> : <SignIn login={login} />;
 }
