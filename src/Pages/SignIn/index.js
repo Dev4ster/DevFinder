@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {Alert} from 'react-native';
 import PropTypes from 'prop-types';
@@ -8,11 +7,7 @@ import AuthService from '../../Services/AuthService';
 
 import {Container, Label, Input, FormButton} from './styles';
 
-import Button from '../../Components/Button';
-import Input from '../../Components/Input';
-
 export default function SignIn({login}) {
-
   const submitForm = (data) => {
     AuthService.login(data.user, data.password)
       .then(() => {
