@@ -20,4 +20,4 @@ export const Input = styled.TextInput`
 
 export const FormButton = styled.Button`
   background-color: #7159c1;
-`
+`;
