@@ -17,6 +17,7 @@ export default function Routes() {
       <Tab.Navigator tabBar={Menu}>
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="QrCode" component={QrCode} />
+        <Tab.Screen name="StarRed" component={StarRed} />
       </Tab.Navigator>
     </NavigationContainer>
   );

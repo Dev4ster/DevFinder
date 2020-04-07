@@ -7,6 +7,7 @@ import {
   NavigatorContainer,
   NavigatorItem,
   NavigatorContent,
+  StarredContainer,
 } from './styles';
 
 export default function MenuNavigator({state, descriptors, navigation}) {
@@ -16,9 +17,15 @@ export default function MenuNavigator({state, descriptors, navigation}) {
 
   const isActiveHome = state.index === 0;
   const isActiveQrcode = state.index === 1;
+  const isActiveStarred = state.index === 2;
 
   return (
     <Container>
+      <StarredContainer
+        active={isActiveStarred}
+        onPress={() => navigate('StarRed')}>
+        <Icon name="star" size={20} color="#FFD700" />
+      </StarredContainer>
       <NavigatorContainer>
         <NavigatorItem
           active={isActiveHome}

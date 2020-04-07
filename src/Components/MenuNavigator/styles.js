@@ -32,6 +32,7 @@ export const NavigatorItem = styled.TouchableOpacity`
   ${(props) =>
     props.first &&
     css`
+      border-top-right-radius: 20px;
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
     `}
@@ -39,6 +40,7 @@ export const NavigatorItem = styled.TouchableOpacity`
   ${(props) =>
     props.last &&
     css`
+      border-top-left-radius: 20px;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
     `}
@@ -48,4 +50,14 @@ export const NavigatorContent = styled.Text`
   margin-left: 8px;
   font-size: 14px;
   font-family: 'Raleway-Regular';
+`;
+
+export const StarredContainer = styled.TouchableOpacity`
+  background: #fff;
+  padding: 8px 15px 8px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  elevation: 2;
+
+  background: ${(props) => (props.active ? '#F0F1FF' : '#fff')};
 `;
