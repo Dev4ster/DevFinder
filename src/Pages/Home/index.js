@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import {FlatList} from 'react-native';
 import AppContainer from '../../Components/AppContainer';
 import Header from '../../Components/Header';
@@ -13,7 +13,7 @@ import DevListItem from '../../Components/DevListItem';
 
 import Devs from '../../Components/DevListItem/devs.json';
 
-export default function Home() {
+function Home(props, ref) {
   return (
     <AppContainer>
       <Header>
@@ -31,9 +31,12 @@ export default function Home() {
           </ListTitle>
           <ListItemsContainer>
             <FlatList
+              ref={ref}
               keyExtractor={(item) => String(item.id)}
               data={Devs}
               renderItem={({item}) => <DevListItem profile={item} />}
+              onScrollBeginDrag={() => props.emitter.emit('startDrag')}
+              onScrollEndDrag={() => props.emitter.emit('endDrag')}
             />
           </ListItemsContainer>
         </ListContainer>
@@ -41,3 +44,5 @@ export default function Home() {
     </AppContainer>
   );
 }
+
+export default forwardRef(Home);
