@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -26,6 +26,5 @@ const AuthService = {
       console.log(err);
     }
   },
-}
-;
+};
 export default AuthService;
