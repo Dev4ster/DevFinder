@@ -24,7 +24,7 @@ export default function MenuNavigator({state, descriptors, navigation}) {
       <StarredContainer
         active={isActiveStarred}
         onPress={() => navigate('StarRed')}>
-        <Icon name="star" size={20} color="#FFD700" />
+        <Icon name="star" size={22} color="#FFD700" />
       </StarredContainer>
       <NavigatorContainer>
         <NavigatorItem
