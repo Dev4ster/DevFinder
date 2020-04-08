@@ -1,0 +1,7 @@
+#Tue Apr 07 16:24:51 BRT 2020
+base.0=/home/felipe/codenation/DevFinder/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/home/felipe/github/codenation/squad-2-ad-reactnative-sas-1/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
